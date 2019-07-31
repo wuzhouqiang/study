@@ -163,7 +163,7 @@ for epoch in range(epochs):
         correct += (predicted == label).squeeze().sum().cpu().numpy()
         loss_sigma += loss.item()
         # 每10个iteration 打印一次训练信息，loss为10个iteration的平均
-        if i % 2== 0:
+        if i % 2 == 0:
             loss_avg = loss_sigma / 10
             loss_sigma = 0.0
             print("Training: Epoch[{:0>3}/{:0>3}] Iteration[{:0>3}/{:0>3}] Loss: {:.4f} Acc:{:.2%}" \
