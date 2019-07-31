@@ -65,6 +65,25 @@ import numpy as np
 # print(np.linalg.inv(arr))  # 矩阵的逆
 
 
+import matplotlib.pyplot as plt
+position = 0
+walk = [position]
+steps = 10000
+
+for i in range(steps):
+    step = 1 if np.random.randint(0, 2) else -1
+    position += step
+    walk.append(position)
+
+# plt.plot(walk)
+# plt.show()
+
+print((np.abs(walk) > 10).argmax())
+
+
+
+
+
 
 
 
