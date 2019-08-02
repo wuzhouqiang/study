@@ -94,7 +94,6 @@ def strOnly(func):
         for i in args:
             if not isinstance(i, str):
                 raise TypeError('Argument {} must be {}'.format(i, str))
-            print(i)
         for key, values in kwargs.items():
             print(key, values)
         func()
