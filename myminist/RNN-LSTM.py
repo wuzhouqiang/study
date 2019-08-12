@@ -37,7 +37,7 @@ print(char_to_idx)
 
 
 # 构建训练数据
-def make_sequence(x, dic): # 字符编码
+def make_sequence(x, dic):  # 字符编码
     idx = [dic[i.lower()] for i in x]
     idx = torch.LongTensor(idx)
     return idx
@@ -113,8 +113,8 @@ net = net.eval()
 test_sent = 'Everybody ate the apple'
 test = make_sequence(test_sent.split(), word_to_idx).unsqueeze(0)
 out = net(test, test_sent.split())
-print('out=',out)
-print('tag_to_idx=',tag_to_idx)
+print('out=', out)
+print('tag_to_idx=', tag_to_idx)
 
 """
 最后可以得到上面的结果，因为最后一层的线性层没有使用 softmax，所以数值不太像一个概率，
