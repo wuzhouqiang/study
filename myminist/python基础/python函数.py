@@ -89,19 +89,21 @@ import time
 # student_run(3, i=3, j=5)
 # student_run(23, 2)
 
-def strOnly(func):
-    def check(*args, **kwargs):
-        for i in args:
-            if not isinstance(i, str):
-                raise TypeError('Argument {} must be {}'.format(i, str))
-        for key, values in kwargs.items():
-            print(key, values)
-        func()
-    return check
+# def strOnly(func):
+#     def check(*args, **kwargs):
+#         for i in args:
+#             if not isinstance(i, str):
+#                 raise TypeError('Argument {} must be {}'.format(i, str))
+#         for key, values in kwargs.items():
+#             print(key, values)
+#         func()
+#     return check
+#
+# @strOnly
+# def student(*args, **kwargs):
+#     print("student")
+#
+#
+# student("3", "312", i=3, j=3)
 
-@strOnly
-def student(*args, **kwargs):
-    print("student")
 
-
-student("3", "312", i=3, j=3)
